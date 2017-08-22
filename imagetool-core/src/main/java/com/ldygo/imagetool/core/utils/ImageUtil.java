@@ -208,7 +208,7 @@ public class ImageUtil {
 		if(maxHeight==0){
 			maxHeight = origHeight/ratio;
 		}
-		image = Scalr.resize(image, Scalr.Method.AUTOMATIC, Scalr.Mode.AUTOMATIC, maxWidth, maxHeight);
+		image = Scalr.resize(image, Scalr.Method.AUTOMATIC, Scalr.Mode.AUTOMATIC, maxWidth>origWidth?origWidth:maxWidth, maxHeight>origHeight?origHeight:maxHeight);
 
 		if(rotaton==90){
 			image = Scalr.rotate(image, Scalr.Rotation.CW_90);
@@ -251,7 +251,7 @@ public class ImageUtil {
 		if(maxHeight==0){
 			maxHeight = origHeight/ratio;
 		}
-		image = Scalr.resize(image, Scalr.Method.AUTOMATIC, Scalr.Mode.AUTOMATIC, maxWidth, maxHeight);
+		image = Scalr.resize(image, Scalr.Method.AUTOMATIC, Scalr.Mode.AUTOMATIC, maxWidth>origWidth?origWidth:maxWidth, maxHeight>origHeight?origHeight:maxHeight);
 
 		if(rotaton==90){
 			image = Scalr.rotate(image, Scalr.Rotation.CW_90);
@@ -291,7 +291,7 @@ public class ImageUtil {
 			if(maxHeight==0){
 				maxHeight = origHeight/ratio;
 			}
-			BufferedImage rescaled = Scalr.resize(frame, Scalr.Method.AUTOMATIC, Scalr.Mode.AUTOMATIC, maxWidth, maxHeight);
+			BufferedImage rescaled = Scalr.resize(frame, Scalr.Method.AUTOMATIC, Scalr.Mode.AUTOMATIC, maxWidth>origWidth?origWidth:maxWidth, maxHeight>origHeight?origHeight:maxHeight);
 			if(rotaton==90){
 				rescaled = Scalr.rotate(rescaled, Scalr.Rotation.CW_90);
 			}else if(rotaton==180){
