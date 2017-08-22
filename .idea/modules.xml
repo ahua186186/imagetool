@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/imagetool.iml" filepath="$PROJECT_DIR$/imagetool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imagetool-core/imagetool-core.iml" filepath="$PROJECT_DIR$/imagetool-core/imagetool-core.iml" />
+    </modules>
+  </component>
+</project>
