@@ -11,14 +11,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
 
-/**
- * @Title: GifDecoder.java
- * @Package org.summercool.gif
- * @Description: TODO(添加描述)
- * @author Administrator
- * @date 2012-7-12 下午1:39:23
- * @version V1.0
- */
+
 public class GifDecoder {
 
 	/**
@@ -251,9 +244,6 @@ public class GifDecoder {
 
 	/**
 	 * Reads GIF image from stream
-	 * 
-	 * @param BufferedInputStream
-	 *        containing GIF file.
 	 * @return read status code (0 = no errors)
 	 */
 	public int read(BufferedInputStream is) {
@@ -280,8 +270,7 @@ public class GifDecoder {
 	/**
 	 * Reads GIF image from stream
 	 * 
-	 * @param InputStream
-	 *        containing GIF file.
+	 * @param
 	 * @return read status code (0 = no errors)
 	 */
 	public int read(InputStream is) {

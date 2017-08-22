@@ -24,11 +24,11 @@ public class MutiThreadTest {
 				@Override
 				public void run() {
 					try {
-						FileInputStream in = new FileInputStream(new File("C:/Users/lenovo/Desktop/新建文件夹/网查联系人手机号1.jpg"));
-						FileOutputStream out = new FileOutputStream(new File("C:/Users/lenovo/Desktop/新建文件夹/网查联系人手机号11.jpg"));
+						FileInputStream in = new FileInputStream(new File("C:/Users/lenovo/Desktop/新建文件夹/征信报告4.jpg"));
+						FileOutputStream out = new FileOutputStream(new File("C:/Users/lenovo/Desktop/新建文件夹/征信报告44.jpg"));
 						BufferedInputStream bin = new BufferedInputStream(in);
 						BufferedOutputStream bout = new BufferedOutputStream(out);
-						int degreeOfRotation = ImageUtil.getDegreeOfRotation(new File("C:/Users/lenovo/Desktop/新建文件夹/网查联系人手机号1.jpg"));
+						int degreeOfRotation = ImageUtil.getDegreeOfRotation(new File("C:/Users/lenovo/Desktop/新建文件夹/征信报告4.jpg"));
 						try {
 							long start = System.currentTimeMillis();
 							ImageUtil.resize(bin, bout, 1024, 1024, 7, 1f, null, ImageUtil.FONT, ImageUtil.FONT_COLOR, 1, degreeOfRotation);

@@ -1,13 +1,5 @@
 package com.ldygo.imagetool.core;
 
-/**
- * @Title: NeuQuant.java
- * @Package org.summercool.gif
- * @Description: TODO(添加描述)
- * @author Administrator
- * @date 2012-7-12 下午1:41:45
- * @version V1.0
- */
 /*
  * NeuQuant Neural-Net Quantization Algorithm ------------------------------------------ Copyright (c) 1994 Anthony
  * Dekker NEUQUANT Neural-Net quantization algorithm by Anthony Dekker, 1994. See
@@ -19,8 +11,6 @@ package com.ldygo.imagetool.core;
  * Software, and to permit persons who receive copies from any such party to do so, with the only requirement being that
  * this copyright notice remain intact.
  */
-
-// Ported to Java 12/00 K Weiner
 
 public class NeuQuant {
 

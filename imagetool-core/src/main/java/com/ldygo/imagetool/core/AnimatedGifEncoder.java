@@ -9,14 +9,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * @Title: AnimatedGifEncoder.java
- * @Package org.summercool.gif
- * @Description: TODO(添加描述)
- * @author Administrator
- * @date 2012-7-12 下午1:33:19
- * @version V1.0
- */
 
 /**
  * Class AnimatedGifEncoder - Encodes a GIF file consisting of one or
@@ -34,9 +26,6 @@ import java.io.OutputStream;
  * for any purpose, however, refer to the Unisys LZW patent for restrictions
  * on use of the associated LZWEncoder class.  Please forward any corrections
  * to questions at fmsware.com.
- *
- * @author Kevin Weiner, FM Software
- * @version 1.03 November 2003
  *
  */
 

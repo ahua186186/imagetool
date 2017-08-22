@@ -3,17 +3,9 @@ package com.ldygo.imagetool.core;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * @Title: LZWEncoder.java
- * @Package org.summercool.gif
- * @Description: TODO(添加描述)
- * @author Administrator
- * @date 2012-7-12 下午1:35:14
- * @version V1.0
- */
+
 // ==============================================================================
 // Adapted from Jef Poskanzer's Java port by way of J. M. G. Elliott.
-// K Weiner 12/00
 
 class LZWEncoder {
 
