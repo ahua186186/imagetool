@@ -10,14 +10,154 @@
   </modules>
   <packaging>pom</packaging>
 
+  <repositories>
+    <repository>
+      <id>public</id>
+      <name>public</name>
+      <url>http://10.90.136.34:30000/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <!-- 关闭从public下载snapshots -->
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>private</id>
+      <name>private</name>
+      <url>http://10.90.136.34:30000/nexus/content/groups/private/</url>
+      <releases>
+        <enabled>true</enabled>
+        <!-- 每次构建都从远程仓库检查更新 -->
+        <updatePolicy>always</updatePolicy>
+        <!-- 验证checksum文件 -->
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <!-- 每次构建都从远程仓库检查更新 -->
+        <updatePolicy>always</updatePolicy>
+        <!-- 验证checksum文件 -->
+        <checksumPolicy>warn</checksumPolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>public</id>
+      <name>public</name>
+      <url>http://10.90.136.34:30000/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>private</id>
+      <name>private</name>
+      <url>http://10.90.136.34:30000/nexus/content/groups/private/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+
   <distributionManagement>
-    <!--<site>
-      <id>website</id>
-      <url>scp://webhost.company.com/www/website</url>
-    </site>-->
+    <!-- dev -->
+    <repository>
+      <id>releases</id>
+      <name>releases</name>
+      <url>http://10.90.136.34:30000/nexus/content/repositories/releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>snapshots</name>
+      <url>http://10.90.136.34:30000/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+  <build>
+    <plugins>
+      <!-- 指定 JDK 版本. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>UTF-8</encoding>
+          <compilerArguments>
+            <verbose />
+            <bootclasspath>C:\Program Files\Java\jdk1.7.0_80\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_80\jre\lib\jce.jar</bootclasspath>
+          </compilerArguments>
+        </configuration>
+      </plugin>
+      <!-- 构建时 jar 的附带源码. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.1.2</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- 打包时不进行 junit 测试. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+        <version>2.12</version>
+      </plugin>
+      <!-- shade插件打包成jar包 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <createSourcesJar>true</createSourcesJar>
+              <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+              <artifactSet>
+                <includes>
+                  <include>com.alibaba:imagetool-core</include>
+                  <include>com.drewnoakes:metadata-extractor</include>
+                  <include>commons-io:commons-io</include>
+                </includes>
+              </artifactSet>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-assembly-plugin</artifactId>
+           <version>2.2.1</version>
+           <configuration>
+               <descriptorRefs>
+                   <descriptorRef>jar-with-dependencies</descriptorRef>
+               </descriptorRefs>
+           </configuration>
+       </plugin>-->
+    </plugins>
+  </build>
+
 </project>
