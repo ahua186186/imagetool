@@ -1,4 +1,4 @@
-package com.ldygo.imagetool.core;
+package com.ahua.imagetool.core;
 
 import org.apache.commons.io.IOUtils;
 
