@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.ldygo</groupId>
+  <groupId>com.ahua</groupId>
   <artifactId>imagetool</artifactId>
   <version>1.0</version>
   <modules>
@@ -14,7 +14,7 @@
     <repository>
       <id>public</id>
       <name>public</name>
-      <url>http://10.90.136.34:30000/nexus/content/groups/public/</url>
+      <url>http://10.90.16.33:30000/nexus/content/groups/public/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -26,7 +26,7 @@
     <repository>
       <id>private</id>
       <name>private</name>
-      <url>http://10.90.136.34:30000/nexus/content/groups/private/</url>
+      <url>http://10.90.16.33:30000/nexus/content/groups/private/</url>
       <releases>
         <enabled>true</enabled>
         <!-- 每次构建都从远程仓库检查更新 -->
@@ -47,7 +47,7 @@
     <pluginRepository>
       <id>public</id>
       <name>public</name>
-      <url>http://10.90.136.34:30000/nexus/content/groups/public/</url>
+      <url>http://10.90.16.33:30000/nexus/content/groups/public/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -58,7 +58,7 @@
     <pluginRepository>
       <id>private</id>
       <name>private</name>
-      <url>http://10.90.136.34:30000/nexus/content/groups/private/</url>
+      <url>http://10.90.16.33:30000/nexus/content/groups/private/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -67,21 +67,19 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-
   <distributionManagement>
-    <!-- dev -->
     <repository>
       <id>releases</id>
       <name>releases</name>
-      <url>http://10.90.136.34:30000/nexus/content/repositories/releases/</url>
+      <url>http://10.90.16.33:30000/nexus/content/repositories/releases/</url>
     </repository>
     <snapshotRepository>
       <id>snapshots</id>
       <name>snapshots</name>
-      <url>http://10.90.136.34:30000/nexus/content/repositories/snapshots/</url>
+      <url>http://10.90.16.33:30000/nexus/content/repositories/snapshots/</url>
+      <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
   </distributionManagement>
-
   <build>
     <plugins>
       <!-- 指定 JDK 版本. -->

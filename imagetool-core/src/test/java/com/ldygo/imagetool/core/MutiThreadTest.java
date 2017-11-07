@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
  */
 public class MutiThreadTest {
     public static void main(String[] args) throws InterruptedException {
-		final int size = 100; //并发
+		final int size = 1; //并发
 		final CountDownLatch cdl = new CountDownLatch(size);
 
 		ExecutorService executorServicePool = Executors.newFixedThreadPool(200);
