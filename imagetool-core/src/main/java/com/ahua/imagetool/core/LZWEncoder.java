@@ -1,4 +1,4 @@
-package com.ldygo.imagetool.core;
+package com.ahua.imagetool.core;
 
 import java.io.IOException;
 import java.io.OutputStream;

@@ -1,4 +1,4 @@
-package com.ldygo.imagetool.core;
+package com.ahua.imagetool.core;
 
 /*
  * NeuQuant Neural-Net Quantization Algorithm ------------------------------------------ Copyright (c) 1994 Anthony

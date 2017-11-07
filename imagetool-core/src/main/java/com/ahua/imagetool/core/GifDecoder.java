@@ -1,5 +1,5 @@
 
-package com.ldygo.imagetool.core;
+package com.ahua.imagetool.core;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

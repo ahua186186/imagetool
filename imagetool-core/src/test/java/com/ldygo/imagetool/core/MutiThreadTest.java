@@ -1,7 +1,8 @@
 package com.ldygo.imagetool.core;
 
-import com.ldygo.imagetool.core.utils.ImageUtil;
 import org.apache.commons.io.IOUtils;
+
+import com.ahua.imagetool.core.utils.ImageUtil;
 
 import java.io.*;
 import java.util.concurrent.CountDownLatch;

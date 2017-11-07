@@ -1,14 +1,13 @@
-package com.ldygo.imagetool.core.utils;
+package com.ahua.imagetool.core.utils;
 
+import com.ahua.imagetool.core.AnimatedGifEncoder;
+import com.ahua.imagetool.core.GifDecoder;
+import com.ahua.imagetool.core.Scalr;
 import com.drew.imaging.ImageMetadataReader;
 import com.drew.imaging.ImageProcessingException;
 import com.drew.metadata.Metadata;
 import com.drew.metadata.exif.ExifDirectoryBase;
 import com.drew.metadata.exif.ExifIFD0Directory;
-
-import com.ldygo.imagetool.core.AnimatedGifEncoder;
-import com.ldygo.imagetool.core.GifDecoder;
-import com.ldygo.imagetool.core.Scalr;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGEncodeParam;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
